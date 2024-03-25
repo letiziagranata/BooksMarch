@@ -16,6 +16,8 @@
 		66F092F12BB0479E00CAC26D /* BooksUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F092F02BB0479E00CAC26D /* BooksUIKitTests.swift */; };
 		66F092FB2BB0479E00CAC26D /* BooksUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F092FA2BB0479E00CAC26D /* BooksUIKitUITests.swift */; };
 		66F092FD2BB0479E00CAC26D /* BooksUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F092FC2BB0479E00CAC26D /* BooksUIKitUITestsLaunchTests.swift */; };
+		66F093432BB1942500CAC26D /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F093412BB1942500CAC26D /* MyCollectionViewCell.swift */; };
+		66F093442BB1942500CAC26D /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F093422BB1942500CAC26D /* MyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		66F092F62BB0479E00CAC26D /* BooksUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooksUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F092FA2BB0479E00CAC26D /* BooksUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksUIKitUITests.swift; sourceTree = "<group>"; };
 		66F092FC2BB0479E00CAC26D /* BooksUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		66F093412BB1942500CAC26D /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		66F093422BB1942500CAC26D /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				66F092DD2BB0479D00CAC26D /* ViewController.swift */,
 				66F092DF2BB0479D00CAC26D /* Main.storyboard */,
 				66F092E22BB0479E00CAC26D /* Assets.xcassets */,
+				66F093412BB1942500CAC26D /* MyCollectionViewCell.swift */,
+				66F093422BB1942500CAC26D /* MyCollectionViewCell.xib */,
 				66F092E42BB0479E00CAC26D /* LaunchScreen.storyboard */,
 				66F092E72BB0479E00CAC26D /* Info.plist */,
 			);
@@ -233,6 +239,7 @@
 			files = (
 				66F092E62BB0479E00CAC26D /* LaunchScreen.storyboard in Resources */,
 				66F092E32BB0479E00CAC26D /* Assets.xcassets in Resources */,
+				66F093442BB1942500CAC26D /* MyCollectionViewCell.xib in Resources */,
 				66F092E12BB0479D00CAC26D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			files = (
 				66F092DE2BB0479D00CAC26D /* ViewController.swift in Sources */,
 				66F092DA2BB0479D00CAC26D /* AppDelegate.swift in Sources */,
+				66F093432BB1942500CAC26D /* MyCollectionViewCell.swift in Sources */,
 				66F092DC2BB0479D00CAC26D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
