@@ -13,6 +13,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let layout = UICollectionViewFlowLayout()
+//        layout.itemSize = CGSize(width: 160, height: 90)
+//        collectionView.collectionViewLayout = layout
+        
+        collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -34,12 +40,18 @@ extension ViewController: UICollectionViewDataSource {
         return 12
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
+        
+        cell.configure(with: UIImage(named: "image")!)
         
         return cell
     }
 }
-//extension ViewController: UICollectionViewDelegateFlowLayout {
-//
-//}
+extension ViewController: UICollectionViewDelegateFlowLayout {
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 160, height: 90 )
+//    }
+    
+}
 
