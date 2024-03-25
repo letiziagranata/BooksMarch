@@ -37,12 +37,16 @@ extension ViewController: UICollectionViewDelegate {
 }
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
         
-        cell.configure(with: UIImage(named: "image")!)
+        let index = indexPath.row
+        let section = sections[index]
+    
+//        cell.configure(with: UIImage(named: SectionModel(imageName: ))!)
+        cell.imageView.image = UIImage(named: section.imageName)
         
         return cell
     }
