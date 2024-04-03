@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="MyCollectionViewCell" id="gTV-IL-0wX" customClass="MyCollectionViewCell" customModule="BooksUIKit" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" id="gTV-IL-0wX" customClass="MyCollectionViewCell" customModule="BooksUIKit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="179" height="201"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -17,22 +17,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EpT-g8-AsW">
-                        <rect key="frame" x="0.0" y="0.0" width="179" height="217"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="4mn-j3-4BB"/>
-                            <constraint firstAttribute="width" constant="90" id="EA0-4X-soo"/>
-                            <constraint firstAttribute="height" constant="160" id="Lh6-KP-Czs"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="We0-YD-vtt"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="179" height="201"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="EpT-g8-AsW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2H5-uh-71S"/>
-                <constraint firstAttribute="trailing" secondItem="EpT-g8-AsW" secondAttribute="trailing" id="ShK-6c-CZM"/>
-                <constraint firstItem="EpT-g8-AsW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fQ4-zJ-146"/>
-                <constraint firstAttribute="bottom" secondItem="EpT-g8-AsW" secondAttribute="bottom" id="hkO-DI-7h3"/>
+                <constraint firstAttribute="trailing" secondItem="EpT-g8-AsW" secondAttribute="trailing" id="1h8-66-RxE"/>
+                <constraint firstItem="EpT-g8-AsW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F5h-Pt-5MH"/>
+                <constraint firstAttribute="bottom" secondItem="EpT-g8-AsW" secondAttribute="bottom" id="nWk-74-roH"/>
+                <constraint firstItem="EpT-g8-AsW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vXn-GA-Gfa"/>
             </constraints>
             <size key="customSize" width="179" height="201"/>
             <connections>

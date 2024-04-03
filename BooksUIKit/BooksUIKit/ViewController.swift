@@ -9,8 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var collectionView: UICollectionView!
-
+    @IBOutlet weak var collectionView1: UICollectionView!
+    
+    @IBOutlet weak var collectionView2: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,10 +20,13 @@ class ViewController: UIViewController {
 //        layout.itemSize = CGSize(width: 160, height: 90)
 //        collectionView.collectionViewLayout = layout
         
-        collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
-
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView1.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
+        collectionView1.delegate = self
+        collectionView1.dataSource = self
+        
+        collectionView2.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
+        collectionView2.delegate = self
+        collectionView2.dataSource = self
         
     }
 
@@ -35,15 +40,15 @@ extension ViewController: UICollectionViewDelegate {
         print("youtapped")
     }
 }
+
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return sections.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
         
-        let index = indexPath.row
-        let section = sections[index]
+        let section = sections[indexPath.row]
     
 //        cell.configure(with: UIImage(named: SectionModel(imageName: ))!)
         cell.imageView.image = UIImage(named: section.imageName)
@@ -56,6 +61,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width: 160, height: 90 )
 //    }
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 160, height: 90)
+//    }
 }
 
