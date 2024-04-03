@@ -164,7 +164,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="92h-T9-dZL" kind="relationship" relationship="viewControllers" id="BMi-T3-WET"/>
-                        <segue destination="K9y-4b-Yh8" kind="relationship" relationship="viewControllers" destinationCreationSelector="Library" id="NhQ-FD-ofJ"/>
+                        <segue destination="K9y-4b-Yh8" kind="relationship" relationship="viewControllers" id="NhQ-FD-ofJ"/>
+                        <segue destination="R8m-wF-WSp" kind="relationship" relationship="viewControllers" destinationCreationSelector="BookStore" id="Rjg-qH-t3a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="md6-y5-8Xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,8 +207,40 @@
             </objects>
             <point key="canvasLocation" x="94" y="720"/>
         </scene>
+        <!--Book Store-->
+        <scene sceneID="Sn0-ag-5zg">
+            <objects>
+                <viewController id="R8m-wF-WSp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Li7-E7-c36">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uTb-8W-HVA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Book Store" image="bag.fill" catalog="system" id="6c6-yi-1Mb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bu9-33-DCF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="720"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2D8-VR-uoZ">
+            <objects>
+                <viewController id="3Gx-qU-bpt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ypy-Id-0cm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dji-uq-pxP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4C-Eo-lLV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="746"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
