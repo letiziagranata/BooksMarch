@@ -43,19 +43,27 @@ extension ViewController: UICollectionViewDelegate {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections.count
+        if collectionView == collectionView1 {
+            return sections.count
+        } else {
+            return sections2.count
+        }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
-        
-        let section = sections[indexPath.row]
-    
-//        cell.configure(with: UIImage(named: SectionModel(imageName: ))!)
-        cell.imageView.image = UIImage(named: section.imageName)
-        
+        if collectionView == collectionView1 {
+            let section = sections[indexPath.row]
+            cell.imageView.image = UIImage(named: section.imageName)
+        } else {
+            let section = sections2[indexPath.row]
+            cell.imageView.image = UIImage(named: section.imageName)
+        }
         return cell
+            
     }
+        
 }
+
 extension ViewController: UICollectionViewDelegateFlowLayout {
 
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
