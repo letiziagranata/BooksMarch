@@ -58,6 +58,13 @@ extension ViewController: UICollectionViewDataSource {
             let section = sections2[indexPath.row]
             cell.imageView.image = UIImage(named: section.imageName)
         }
+        
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cell.layer.shadowRadius = 4.0
+        cell.layer.shadowOpacity = 80
+        cell.layer.masksToBounds = false
+        
         return cell
             
     }

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -18,16 +19,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IKz-uh-p0k">
+                                <rect key="frame" x="0.0" y="532" width="393" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="394" translatesAutoresizingMaskIntoConstraints="NO" id="FUF-Mc-oN4" userLabel="New books &gt;">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="25"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="18" bottom="8" trailing="8"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="   New audiobooks ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="22" name="Georgia-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingMiddle" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="&gt;">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.58426626932989689" green="0.58426626932989689" blue="0.58426626932989689" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="22" name="Georgia-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingMiddle" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91T-A2-VGg">
+                                        <rect key="frame" x="0.0" y="35" width="393" height="205"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="14" sectionInsetReference="layoutMargins" id="I1W-cJ-83n">
+                                            <size key="itemSize" width="200" height="190"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="gce-SL-sEY" customClass="MyCollectionViewCell" customModule="BooksUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="18" y="6" width="200" height="190"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fqP-O2-47e">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="190"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="200" height="190"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="91T-A2-VGg" secondAttribute="trailing" id="1Dr-as-lHT"/>
+                                    <constraint firstItem="91T-A2-VGg" firstAttribute="leading" secondItem="IKz-uh-p0k" secondAttribute="leading" id="CTp-RV-VP0"/>
+                                    <constraint firstAttribute="height" constant="240" id="U9s-pN-38g"/>
+                                    <constraint firstAttribute="bottom" secondItem="91T-A2-VGg" secondAttribute="bottom" id="UKU-W9-Htg"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZQ-pj-SAu">
+                                <rect key="frame" x="16" y="152" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray5Color"/>
+                                <imageReference key="image" image="circle" catalog="system" symbolScale="large" variableValue="1"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="black"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New! Read more with daily reading goals." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6h-fG-mnv">
+                                <rect key="frame" x="46" y="154" width="327" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgp-Yl-ee7">
+                                <rect key="frame" x="17" y="190" width="360" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="edh-Ii-SMc">
-                                <rect key="frame" x="0.0" y="155" width="393" height="280"/>
+                                <rect key="frame" x="0.0" y="212" width="393" height="290"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="394" translatesAutoresizingMaskIntoConstraints="NO" id="q9n-yY-XTo">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="25"/>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="18" bottom="8" trailing="8"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="   New books">
+                                            <fragment content="   New books ">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="22" name="Georgia-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingMiddle" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="&gt;">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.58426626932989689" green="0.58426626932989689" blue="0.58426626932989689" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <font key="NSFont" size="22" name="Georgia-Bold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingMiddle" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -36,7 +116,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JAh-Po-thI">
-                                        <rect key="frame" x="0.0" y="37" width="393" height="243"/>
+                                        <rect key="frame" x="0.0" y="37" width="393" height="253"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="14" sectionInsetReference="layoutMargins" id="FdF-YR-Pow">
                                             <size key="itemSize" width="200" height="250"/>
@@ -45,8 +125,8 @@
                                             <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="4Vg-dO-9Qf" customClass="MyCollectionViewCell" customModule="BooksUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="18" y="1" width="200" height="241"/>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="4Vg-dO-9Qf" customClass="MyCollectionViewCell" customModule="BooksUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="18" y="6" width="200" height="241"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9cm-Xa-5C4">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="241"/>
@@ -58,59 +138,25 @@
                                     </collectionView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="5mw-Re-O12"/>
-                                    <constraint firstAttribute="bottom" secondItem="JAh-Po-thI" secondAttribute="bottom" id="Dte-jj-qJ7"/>
+                                    <constraint firstAttribute="height" constant="290" id="94A-0p-itC"/>
                                     <constraint firstItem="JAh-Po-thI" firstAttribute="leading" secondItem="edh-Ii-SMc" secondAttribute="leading" id="WYa-Iw-47z"/>
                                     <constraint firstItem="q9n-yY-XTo" firstAttribute="top" secondItem="edh-Ii-SMc" secondAttribute="top" id="aHe-Z7-IjH"/>
-                                    <constraint firstItem="JAh-Po-thI" firstAttribute="top" secondItem="q9n-yY-XTo" secondAttribute="bottom" constant="12" id="aQb-g6-THs"/>
                                     <constraint firstAttribute="trailing" secondItem="q9n-yY-XTo" secondAttribute="trailing" id="oqP-hG-Ooa"/>
+                                    <constraint firstAttribute="bottom" secondItem="JAh-Po-thI" secondAttribute="bottom" id="pHd-oj-RJN"/>
                                     <constraint firstItem="q9n-yY-XTo" firstAttribute="leading" secondItem="edh-Ii-SMc" secondAttribute="leading" id="rpv-Pc-5XR"/>
                                     <constraint firstAttribute="trailing" secondItem="JAh-Po-thI" secondAttribute="trailing" id="xGI-HE-iVF"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IKz-uh-p0k">
-                                <rect key="frame" x="0.0" y="455" width="393" height="250"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91T-A2-VGg">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="14" sectionInsetReference="layoutMargins" id="I1W-cJ-83n">
-                                            <size key="itemSize" width="160" height="140"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" id="gce-SL-sEY" customClass="MyCollectionViewCell" customModule="BooksUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="18" y="55" width="160" height="140"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fqP-O2-47e">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="160" height="140"/>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="91T-A2-VGg" secondAttribute="trailing" id="1Dr-as-lHT"/>
-                                    <constraint firstItem="91T-A2-VGg" firstAttribute="leading" secondItem="IKz-uh-p0k" secondAttribute="leading" id="CTp-RV-VP0"/>
-                                    <constraint firstAttribute="height" constant="250" id="U9s-pN-38g"/>
-                                    <constraint firstAttribute="bottom" secondItem="91T-A2-VGg" secondAttribute="bottom" id="UKU-W9-Htg"/>
-                                    <constraint firstItem="91T-A2-VGg" firstAttribute="top" secondItem="IKz-uh-p0k" secondAttribute="top" id="ksU-08-r6c"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="edh-Ii-SMc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="1n6-Wz-XAA"/>
                             <constraint firstItem="edh-Ii-SMc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jfh-3E-hFT"/>
                             <constraint firstItem="IKz-uh-p0k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L02-oS-8ll"/>
-                            <constraint firstItem="IKz-uh-p0k" firstAttribute="top" secondItem="edh-Ii-SMc" secondAttribute="bottom" constant="20" id="O5x-Zf-SR1"/>
                             <constraint firstItem="edh-Ii-SMc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fHo-Hd-YBC"/>
-                            <constraint firstItem="edh-Ii-SMc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i7d-Qo-kLn"/>
                             <constraint firstItem="IKz-uh-p0k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k1p-tb-vTU"/>
+                            <constraint firstItem="IKz-uh-p0k" firstAttribute="top" secondItem="edh-Ii-SMc" secondAttribute="bottom" constant="30" id="tPH-nG-Z9c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Read Now" id="lsZ-79-scd"/>
@@ -275,10 +321,20 @@
         <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
+        <image name="circle" catalog="system" width="128" height="123"/>
         <image name="headphones" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
