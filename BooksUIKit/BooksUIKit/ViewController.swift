@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView2: UICollectionView!
     
+    @IBOutlet weak var StackView1: UIStackView!
+    @IBOutlet weak var StackView2: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +31,14 @@ class ViewController: UIViewController {
         collectionView2.delegate = self
         collectionView2.dataSource = self
         
+//        StackView2.layer.shadowColor = UIColor.lightGray.cgColor
+//        StackView2.layer.shadowOffset = CGSize(width: 0, height: 150)
+//        StackView2.layer.shadowRadius = 1.0
+//        StackView2.layer.shadowOpacity = 0.5
+//        StackView1.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+//        StackView1.layer.shouldRasterize = true
+//        StackView1.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+//        StackView2.layer.masksToBounds = false
     }
 
 
@@ -59,8 +70,8 @@ extension ViewController: UICollectionViewDataSource {
             cell.imageView.image = UIImage(named: section.imageName)
         }
         
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
         cell.layer.shadowRadius = 4.0
         cell.layer.shadowOpacity = 80
         cell.layer.masksToBounds = false
